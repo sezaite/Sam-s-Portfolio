@@ -4,11 +4,12 @@
 @import './layout.css';
 
 /* third party css */
-
+@import './font-awesome.min.css';
 /* components */
 @import './button.css';
 @import './form.css';
 @import './header.css';
+@import './hero.css';
 @import './news.css';
 @import './work.css';
 @import './footer.css';
@@ -16,6 +17,3 @@
 
 /* custom styling */
 
-main {
-    margin-top: 100px;
-}

@@ -1,5 +1,6 @@
 :root {
-    --main-color: #fff;
+    --main-color: white;
+    --secondary-color: rgb(241, 241, 241);
     --main-text-color: #000;
     --main-font: Helvetica, sans-serif;
     --section-padding: 80px;

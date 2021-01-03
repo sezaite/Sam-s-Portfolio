@@ -1,0 +1,70 @@
+.container.hero {
+    padding-top: 200px;
+    min-height: 100vh;
+    text-align: center;
+    background-color:var(--secondary-color);
+    overflow: hidden;
+    
+}
+
+    .container.hero > .row {
+    }
+
+        .container.hero > .row > .col-12{
+            position: relative;
+        }
+
+            .container.hero .col-12 h1{
+                width: 100%;
+                font-size: 80px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .container.hero .col-12 p{
+                width: 100%;
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .container.hero > .row .socials{
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+                .container.hero .socials > .fa{
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 30px;
+                    text-align: center;
+                    line-height: 40px;
+                    margin-right: 30px;
+                }
+
+                .container.hero .socials > .fa:hover{
+                    text-align: center;
+                }
+
+                .container.hero .socials > .fa:last-of-type {
+                    margin-right: 0;
+                }
+
+                .container.hero > .row .down {
+                    position: absolute;
+                    bottom: -40px;
+                    right: 50%;
+                    transform: translateX(50%);
+                    font-size: 30px;
+                    line-height: 30px;
+                }
+
+                .container.hero > .row .down:hover {
+    
+                }
+    

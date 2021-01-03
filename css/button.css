@@ -8,11 +8,13 @@
     line-height: 1.5;
     letter-spacing: 1px;
     border: 2px solid var(--btn-main-color);
-    transition: all 0.4s;
+    transition: all 0.5s;
 }
 
-.btn:hover {
-    color: var(--btn-main-color);
-    background-color: var(--btn-secondary-color);
-    cursor: pointer;
-}
+    .btn:hover {
+        color: var(--btn-main-color);
+        background-color: var(--btn-secondary-color);
+        cursor: pointer;
+    }
+
+   
