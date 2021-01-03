@@ -1,3 +1,22 @@
-.container.news {
-    background-color: var(--secondary-color);
+.container.work {
+    min-height: 100vh;
 }
+
+    .container.work > .row {
+
+    }
+
+        .container.work > .row > .col-12 {
+            
+        }
+
+            .container.work > .row h2 {
+                
+            }
+
+            .container.work .col-3 > .project{
+                width: 100%;
+                height: 300px;
+                text-align: center;
+                background-color: var(--accent-color);
+            }

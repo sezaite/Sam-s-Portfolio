@@ -20,6 +20,6 @@ a {
     }
 
     a:active {
-        color: rgb(255, 17, 148);
+        color: var(--accent-color);
         opacity: 1;
     }
