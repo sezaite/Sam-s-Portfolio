@@ -8,5 +8,7 @@
 /* components */
 @import './button.css';
 @import './form.css';
+@import './header.css';
 @import './news.css';
 @import './work.css';
+@import './footer.css';

@@ -1,0 +1,44 @@
+header {
+    display: inline-box;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    background-color: red;
+    padding: 0 20%;
+
+}
+
+header > img {
+    float: left;
+    background-color: cadetblue;
+    margin-top: 20px;
+    height: 40px;
+    
+}
+
+header > nav {
+    float: right;
+    background-color: violet;
+    line-height: 40px;
+    margin-top: 20px
+    
+}
+
+header > nav > .menu-item {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--main-text-color);
+    padding: 8px;
+    margin-right: 70px;
+    background-color: palegoldenrod;
+}
+
+header > nav > .menu-item:last-of-type {
+    margin-right: 0;
+}
+
+header > nav > .menu-item:hover {
+    cursor: pointer;
+}
