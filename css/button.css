@@ -9,7 +9,6 @@
     letter-spacing: 1px;
     border: 2px solid var(--btn-main-color);
     transition: all 0.4s;
-    text-transform: uppercase;
 }
 
 .btn:hover {

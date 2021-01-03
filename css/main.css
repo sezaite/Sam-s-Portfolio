@@ -12,3 +12,10 @@
 @import './news.css';
 @import './work.css';
 @import './footer.css';
+
+
+/* custom styling */
+
+main {
+    margin-top: 100px;
+}
