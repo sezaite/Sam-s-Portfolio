@@ -6,7 +6,6 @@ body * {
     box-sizing: border-box;
     font-family: var(--main-font);
     word-break: break-all;
-    text-transform: uppercase;
 }
 
 a {
