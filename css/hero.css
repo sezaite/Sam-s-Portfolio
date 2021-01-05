@@ -2,41 +2,32 @@
     min-height: 100vh;
     background-color:var(--secondary-color);
     overflow: hidden;
-    padding-top: 30px;
+    
 }
 
     .container.hero > .row {
     }
 
-        .container.hero > .row > .col-12{
-            
+        .container.hero > .row > .col-6 {
+            text-align: center;
         }
 
-            .container.hero .col-12 h1{
+            .container.hero .col-6 h1{
                 width: 100%;
                 font-size: 30px;
-                /* text-align: center; */
+                margin: 150px 0 30px;
+                
             }
 
-            .container.hero .col-12 p{
+            .container.hero .col-6 p{
                 width: 100%;
                 font-size: 20px;
-                align-self: stretch;
-                /* text-align: center; */
             }
 
-          
 
-                .container.hero > .row .down {
-                    position: absolute;
-                    bottom: -40px;
-                    right: 50%;
-                    transform: translateX(50%);
-                    font-size: 30px;
-                    line-height: 30px;
-                }
-
-                .container.hero > .row .down:hover {
-    
-                }
-    
+            .container.hero > .row > .col-6 .project {
+                width: 250px;
+                margin-left: calc(50% - 125px);
+                margin-bottom: 50px;
+                
+            }
