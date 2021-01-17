@@ -1,3 +1,14 @@
-import { HoverFx } from './HoverFx.js';
+import { HoverFx } from './renderAlbums/HoverFx.js';
 
-new HoverFx({ selector: '.container.hero .project' });
+import { albumData } from './data/albumData.js';
+
+const newObject = new HoverFx({
+    selector: '.container.hero .project',
+    data: albumData
+});
+
+
+
+
+
+
