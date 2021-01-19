@@ -1,4 +1,4 @@
-import { AlbumDataValidator } from './AlbumDataValidator.js'
+import { DataValidator } from './DataValidator.js'
 
 
 class HoverFx {
@@ -24,7 +24,7 @@ class HoverFx {
 
     isValidAlbumSelector() {
         const selector = document.querySelector(this.selector);
-        if (!AlbumDataValidator.isSelector(selector)) {
+        if (!DataValidator.isSelector(selector)) {
             return false;
         }
         if (!selector) {
@@ -36,7 +36,7 @@ class HoverFx {
     }
 
     isValidAlbumData() {
-        if (!AlbumDataValidator.isArray(this.data)) {
+        if (!DataValidator.isArray(this.data)) {
             return false;
         }
 
@@ -49,20 +49,21 @@ class HoverFx {
         }
     }
     isValidAlbum(album) {
-        if (!AlbumDataValidator.isObject(album)) {
+        if (!DataValidator.isObject(album)) {
             return false;
         }
 
-        if (!AlbumDataValidator.isImageFile(album.imgLink)) {
+        if (!DataValidator.isImageFile(album.imgLink)) {
             return false;
         }
-        if (!AlbumDataValidator.isArray(album.titles)) {
+        if (!DataValidator.isArray(album.titles)) {
             return false;
         }
-        if (!AlbumDataValidator.isDescription(album.description)) {
+        if (!DataValidator.isDescription(album.description)) {
             return false;
         }
-        if (!AlbumDataValidator.isSpotify(album.spotifyLink)) {
+        if (!DataValidator.isSpotify(album.spotifyLink)) {
+
             return false;
         }
 

@@ -1,4 +1,4 @@
-class AlbumDataValidator {
+class DataValidator {
 
     // VALIDATIONS FOR ALL ALBUM DATA:
 
@@ -89,4 +89,4 @@ class AlbumDataValidator {
 }
 
 
-export { AlbumDataValidator }
+export { DataValidator }
