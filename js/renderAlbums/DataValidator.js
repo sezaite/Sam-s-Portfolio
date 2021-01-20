@@ -86,6 +86,15 @@ class DataValidator {
 
         return true;
     }
+
+    static isBoolean(isVisible) {
+        if (typeof isVisible !== 'boolean') {
+            console.error('Error: value of "is in hero section" must be true or false');
+            return false;
+        }
+        return true;
+    }
+
 }
 
 

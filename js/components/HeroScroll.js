@@ -1,4 +1,4 @@
-import { DataValidator } from '../renderAlbums/DataValidator.js';
+import { isValidAlbumSelector, isValidAlbumData } from './isValidData.js';
 
 
 class HeroScroll {
@@ -14,33 +14,53 @@ class HeroScroll {
         this.dotsDOM = null;
         this.activeDotIndex = 0;
 
+        this.visibleArray = [];
+
         this.init();
 
     }
 
     init() {
-        if (!this.isValidSelector()) {
+        if (!this.isValidAlbumSelector()) {
             return false;
         }
-        if (!this.isValidData()) {
+        if (!this.isvalidData()) {
             return false;
         }
+        this.generateHeroAlbums();
     }
 
-    isValidSelector() {
-        if (!DataValidator.isArray(this.selector)) {
+    generateHeroAlbums() {
+        for (let i = 0; i < this.data.length; i++) {
+            if (this.data.)
+       
+    } return true;
+    }
+
+
+
+    isValidAlbumSelector() {
+        const selector = document.querySelector(this.selector);
+        if (!selector) {
+            console.error('Error: I cannot find a given selector in HTML file!');
             return false;
         }
-        if (!DataValidator.isSelector(this.selector)) {
+        if (!isValidAlbumSelector(selector)) {
+            return false;
+        }
+        this.DOM = selector;
+        return true;
+    }
+
+    isValidData() {
+        if (!isValidAlbumData(this.data)) {
             return false;
         }
         return true;
     }
 
-    isValidData() {
-
-    }
-
 }
+
+
 
 export { HeroScroll }
