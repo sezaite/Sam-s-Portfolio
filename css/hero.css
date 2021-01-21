@@ -24,13 +24,32 @@
 
 /* hero right side */
 
+.container.hero .view {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container.hero .view > .list {
+    display: inline-block;
+    width: 100%;
+    transition: all 1s;
+}
+
+.container.hero .list > .item {
+    width: 100%;
+    padding: 0 40px;
+    text-align: center;
+    float: left;
+}
+
 
         .container.hero .col-6 .project {
             width: 340px;
             height: 340px;
             margin-left: calc(50% - 170px);
             margin-bottom: 50px;
-            background-image: url(../img/main-img.jpg);
+            /* background-image: url(../img/main-img.jpg); */
             background-size: contain;  
             position: relative;
             overflow: hidden;

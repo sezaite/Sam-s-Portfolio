@@ -27,14 +27,110 @@ class HeroScroll {
         if (!this.isvalidData()) {
             return false;
         }
-        this.generateHeroAlbums();
+        if (!this.createNewArray() || this.visibleArray.length === 0) {
+            console.error('Error: there are no album elements to display in hero section');
+            return false;
+        }
+        this.render();
+        this.addEvents();
+    }
+
+    render() {
+        const listWidth = (this.visibleArray.length + 2 * this.pseudoCount) * 100;
+        const HTML = `<div class='view'>
+        <div class="list" style="width: ${listWidth}%; margin-left: -${this.pseudoCount}00%;">
+           ${this.generateHeroAlbums()}
+        </div>
+    </div>`;
+
+        this.DOM.innerHTML = HTML;
+
+        this.listDOM = this.DOM.querySelector('.list');
+
+        if (this.areDotsVisible) {
+            this.controlsDOM = this.DOM.querySelector('.controls');
+            if (!this.controlsDOM) {
+                console.error('Error: Cannot find controls in HTML');
+                return false;
+            }
+            this.dotsDOM = this.DOM.querySelectorAll('.minus');
+            if (!this.controlsDOM) {
+                console.error('Error: Cannot find dots in HTML');
+                return false;
+            }
+        }
+    }
+
+    addEvents() {
+        if (this.areDotsVisible) {
+            for (let i = 0; i < this.dotsDOM.length; i++) {
+                const dot = this.dotsDOM[i];
+                dot.addEventListener('click', () => {
+                    this.clickDot(i);
+                }
+                )
+            }
+        }
+    }
+
+    createNewArray() {
+        for (let i = 0; i < this.data.length; i++) {
+            if (!this.data.isInHeroSection) {
+                continue;
+            }
+            this.visibleArray.push(this.data[i]);
+        }
+        return true;
     }
 
     generateHeroAlbums() {
-        for (let i = 0; i < this.data.length; i++) {
-            if (this.data.)
-       
-    } return true;
+        let HTML = '';
+        const itemWidth = 100 / ((2 * this.pseudoCount) + this.visibleArray.length);
+        const dataCopy = [this.visibleArray[2], this.visibleArray[1], ...this.visibleArray, this.visibleArray[0], this.visibleArray[1]];
+        for (let album of dataCopy) {
+            HTML += `<div class="item" style="width: ${itemWidth}%">
+            <div class="project" style ="background-image: url(../${album.imgLink});">
+            <div id="blur"></div>
+            <div class="project-wrap">
+                ${this.generateTitles(album.titles)}
+                <p>${album.description}</p>
+                <iframe ${album.spotifyLink}></iframe>
+                </div>
+            </div>
+        </div>`
+        }
+        return HTML;
+    }
+
+    generateTitles(titles) {
+        let HTML = "";
+        for (let i = 0; i < titles.length; i++) {
+            HTML += `<h4>${titles[i]}</h4>`;
+        }
+        if (!HTML) {
+            console.error('Error: Could not generate items of an album');
+            return false;
+        } return HTML;
+    }
+
+    generateDots() {
+        let HTML = '';
+        if (!this.areDotsVisible) {
+            console.log('Dots are set to be invisable');
+            return HTML;
+        }
+        HTML = `<div class="minus active"></div>`
+        HTML += `<div class="minus"></div>`.repeat(this.visibleArray.length - 1);
+        return HTML;
+    }
+
+    clickDot(dotIndex) {
+        const dot = this.dotsDOM[dotIndex];
+        this.listDOM.style.marginLeft = -100 * (this.pseudoCount + dotIndex) + '%';
+        this.dotsDOM[this.activeDotIndex].classList.remove('active');
+        this.activeDotIndex = dotIndex;
+        dot.classList.add('active');
+
     }
 
 
