@@ -5,6 +5,7 @@ class DataValidator {
     static isSelector(text) {
         if (typeof text !== 'string' ||
             text === '') {
+            console.log(text);
             console.error('Error: selector type must be not an empty string!');
             return false;
         }
@@ -76,10 +77,12 @@ class DataValidator {
     // }
 
     static isDescription(text) {
-        const descriptionLimit = 500;
+        const descriptionLimit = 600;
         if (typeof text !== 'string' ||
             text === '' ||
             text.length > descriptionLimit) {
+            console.log(text);
+
             console.error(`Error: description has to be a string, cannot be empty, must contain less than ${descriptionLimit} symbols`);
             return false;
         }
@@ -92,6 +95,10 @@ class DataValidator {
             console.error('Error: value of "is in hero section" must be true or false');
             return false;
         }
+        return true;
+    }
+
+    static isSpotify(spotify) {
         return true;
     }
 

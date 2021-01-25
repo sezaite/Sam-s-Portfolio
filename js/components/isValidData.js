@@ -1,5 +1,6 @@
 import { DataValidator } from '../renderAlbums/DataValidator.js';
 
+
 function isValidAlbumSelector(selector) {
     if (!DataValidator.isSelector(selector)) {
         return false;

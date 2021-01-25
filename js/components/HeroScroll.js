@@ -21,10 +21,11 @@ class HeroScroll {
     }
 
     init() {
+        console.log(this.selector);
         if (!this.isValidAlbumSelector()) {
             return false;
         }
-        if (!this.isvalidData()) {
+        if (!this.isValidData()) {
             return false;
         }
         if (!this.createNewArray() || this.visibleArray.length === 0) {
@@ -40,6 +41,7 @@ class HeroScroll {
         const HTML = `<div class='view'>
         <div class="list" style="width: ${listWidth}%; margin-left: -${this.pseudoCount}00%;">
            ${this.generateHeroAlbums()}
+           <div class="controls">${this.generateDots()}</div>
         </div>
     </div>`;
 
@@ -74,8 +76,9 @@ class HeroScroll {
     }
 
     createNewArray() {
+        console.log(this.data);
         for (let i = 0; i < this.data.length; i++) {
-            if (!this.data.isInHeroSection) {
+            if (!this.data[i].isInHeroSection) {
                 continue;
             }
             this.visibleArray.push(this.data[i]);
@@ -89,7 +92,7 @@ class HeroScroll {
         const dataCopy = [this.visibleArray[2], this.visibleArray[1], ...this.visibleArray, this.visibleArray[0], this.visibleArray[1]];
         for (let album of dataCopy) {
             HTML += `<div class="item" style="width: ${itemWidth}%">
-            <div class="project" style ="background-image: url(../${album.imgLink});">
+            <div class="project" style ="background-image: url(../../${album.imgLink});">
             <div id="blur"></div>
             <div class="project-wrap">
                 ${this.generateTitles(album.titles)}
@@ -141,7 +144,7 @@ class HeroScroll {
             console.error('Error: I cannot find a given selector in HTML file!');
             return false;
         }
-        if (!isValidAlbumSelector(selector)) {
+        if (!isValidAlbumSelector(this.selector)) {
             return false;
         }
         this.DOM = selector;

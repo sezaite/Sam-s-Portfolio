@@ -1,4 +1,4 @@
-import { isValidAlbumSelector, isValidAlbumData } from '../components/isValidData';
+import { isValidAlbumSelector, isValidAlbumData } from '../components/isValidData.js';
 
 
 class HoverFx {
@@ -26,7 +26,7 @@ class HoverFx {
             console.error('Error: I cannot find a given selector in HTML file!');
             return false;
         }
-        if (!isValidAlbumSelector(selector)) {
+        if (!isValidAlbumSelector(this.selector)) {
             return false;
         }
         this.DOM = selector;
