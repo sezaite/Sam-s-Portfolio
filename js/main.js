@@ -10,6 +10,20 @@ new HeroScroll({
     areDotsVisible: true,
 });
 
+// if(!HeroScroll){
+//     console.error('Error: I could not generate any content for projects in hero!');
+//     return false;
+// } else {
+
+// };
+
+new HoverFx({
+    selector: '.project-wrap',
+    data: albumData,
+});
+
+
+
 
 
 

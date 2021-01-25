@@ -69,7 +69,7 @@
 
             /* to compile an addition of class visible */
 
-            .container.hero .project > .project-wrap.visible {
+            .container.hero .project .project-wrap.visible {
                 opacity: 1;
             }   
 
