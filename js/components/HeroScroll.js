@@ -43,6 +43,7 @@ class HeroScroll {
            ${this.generateHeroAlbums()}
         </div>
         <div class="controls">${this.generateDots()}</div>
+        <button class='btn'>Show all projects</button>
     </div>`;
 
         this.DOM.innerHTML = HTML;
