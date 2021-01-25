@@ -1,6 +1,5 @@
 import { isValidAlbumSelector, isValidAlbumData } from './isValidData.js';
 
-
 class HeroScroll {
     constructor(params) {
         this.selector = params.selector || 'body';
@@ -21,7 +20,7 @@ class HeroScroll {
     }
 
     init() {
-        console.log(this.selector);
+
         if (!this.isValidAlbumSelector()) {
             return false;
         }
@@ -32,6 +31,7 @@ class HeroScroll {
             console.error('Error: there are no album elements to display in hero section');
             return false;
         }
+        console.log(this.DOM);
         this.render();
         this.addEvents();
     }
@@ -41,8 +41,8 @@ class HeroScroll {
         const HTML = `<div class='view'>
         <div class="list" style="width: ${listWidth}%; margin-left: -${this.pseudoCount}00%;">
            ${this.generateHeroAlbums()}
-           <div class="controls">${this.generateDots()}</div>
         </div>
+        <div class="controls">${this.generateDots()}</div>
     </div>`;
 
         this.DOM.innerHTML = HTML;

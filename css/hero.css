@@ -95,6 +95,34 @@
                         display: none;
                     }
 
+                    .container.hero .controls .minus {
+                        display: inline-block;
+                        width: 17px;
+                        height: 17px;
+                        border-radius: 50%;
+                        margin: 4px 1px 0 4px;
+                        background-color: black;
+                        opacity: 0.5;
+                        transition: opacity 0.5s;
+                    }
+        
+                    .container.hero .controls .minus:hover {
+                            opacity: 0.75;
+                            width: 17px;
+                            height: 17px;
+                            cursor: pointer;
+                        }
+
+                        .container.hero .controls .minus:active{
+                            background-color: var(--accent-color); /*removable*/
+                        }
+                        
+                        .container.hero .controls .minus.active {
+                            opacity: 1;
+                            width: 17px;
+                            height: 17px;
+                        }
+
 /* generate class VISABLE */
         
             .container.hero .project #blur.visable {
