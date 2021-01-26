@@ -94,7 +94,7 @@ class HeroScroll {
         for (let album of dataCopy) {
             HTML += `<div class="item" style="width: ${itemWidth}%">
             <div class="project" style ="background-image: url(../../${album.imgLink});">
-            <div id="blur"></div>
+            <div class="blur" style ="background-image: url(../../${album.imgLink});"></div>
             <div class="project-wrap">
                 ${this.generateTitles(album.titles)}
                 <p>${album.description}</p>

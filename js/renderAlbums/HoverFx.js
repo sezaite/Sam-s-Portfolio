@@ -65,13 +65,33 @@ class HoverFx {
 
 
     hover() {
-        const albums = document.querySelectorAll(".project-wrap");
+        const albums = document.querySelectorAll(".project");
         albums.forEach((album) => {
-            album.addEventListener("mouseover", function () {
-                album.classList.add('visible');
-                console.log('atejau')
+            const wrap = album.querySelector(".project-wrap");
+            const blur = album.querySelector(".blur");
+            album.addEventListener("mouseenter", function () {
+                wrap.classList.add('visible');
+                blur.classList.add('visible');
             });
+            album.addEventListener("mouseleave", function () {
+                wrap.classList.remove('visible');
+                blur.classList.remove('visible');
+            });
+
         });
+
+
+        // blurLayers.forEach((layer) => {
+        //     console.log('latadsgadsfasdS');
+        //     layer.addEventListener("mouseover", function () {
+        //         layer.classList.add('visible');
+        //         console.log('atejau')
+        //     });
+        //     layer.addEventListener("mouseover", function () {
+        //         layer.classList.remove('visible');
+        //         console.log('isejau')
+        //     });
+        // });
     }
 }
 
