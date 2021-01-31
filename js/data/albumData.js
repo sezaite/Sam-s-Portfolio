@@ -1,6 +1,6 @@
 const albumData = [
     {
-        imgLink: '/mai.jpg',
+        imgLink: '/main.jpg',
         titles: ['mixing', 'producing', 'singing'],
         description: ' Ex architecto iusto, cumque quidem aut magni exercitationem laudantium vero obcaecati soluta, molestiae excepturi autem atque, natus dicta tempora? Libero distinctio delectus repudiandae nobis itaque inventore architecto aut! Quia, odio?',
         spotifyLink: 'src="https://open.spotify.com/embed/track/50yIjigJPcVQQxrHHeai4H" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"',
