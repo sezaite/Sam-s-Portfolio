@@ -93,8 +93,8 @@ class HeroScroll {
         const dataCopy = [this.visibleArray[2], this.visibleArray[1], ...this.visibleArray, this.visibleArray[0], this.visibleArray[1]];
         for (let album of dataCopy) {
             HTML += `<div class="item" style="width: ${itemWidth}%">
-            <div class="project" style ="background-image: url("https://sezaite.github.io/sam-portfolio/${album.imgLink}");">
-            <div class="blur" style ="background-image: url("https://sezaite.github.io/sam-portfolio/${album.imgLink}");"></div>
+            <div class="project" style ="background-image: url("https://sezaite.github.io/sam-portfolio${album.imgLink}");">
+            <div class="blur" style ="background-image: url("https://sezaite.github.io/sam-portfolio${album.imgLink}");"></div>
             <div class="project-wrap">
                 ${this.generateTitles(album.titles)}
                 <p>${album.description}</p>
