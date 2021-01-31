@@ -1,9 +1,9 @@
 .container.contact-form {
-
+    position: relative;
 }
 
     .container.contact-form > .row {
-    
+        
     }
 
         .container.contact-form > .row > .col-3-8 {

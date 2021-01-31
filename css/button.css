@@ -17,4 +17,26 @@
         cursor: pointer;
     }
 
+    .container .contact-form .row {
+        position: relative;
+    }
+
+    .btn.circle {
+        position: absolute;
+        text-align: center;
+        top: -24px;
+        right: 190px;
+        padding: 10px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+ 
+
+   
+    
+
   
