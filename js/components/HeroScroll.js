@@ -1,5 +1,6 @@
 import { isValidAlbumSelector, isValidAlbumData } from './isValidData.js';
 
+//unnecessary comment
 
 class HeroScroll {
     constructor(params) {
