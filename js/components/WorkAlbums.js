@@ -5,7 +5,6 @@ class WorkAlbums {
     constructor(params) {
         this.selector = params.selector || 'body';
         this.data = params.data || [];
-        this.albumsLoaded = 0;
 
         this.DOM = null;
 
@@ -24,9 +23,8 @@ class WorkAlbums {
 
     render() {
         let HTML = "";
-        for (let i = this.albumsLoaded; i < this.albumsLoaded + 3; i++) {
+        for (let i = 0; i < 3; i++) {
             HTML += `<div class="col-4">${renderAlbums(this.data[i])}</div>`;
-            this.albumsLoaded++;
         }
         if (!HTML) {
             console.error("I could not generate hTML content for albums in Work Section!");

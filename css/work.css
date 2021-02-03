@@ -15,8 +15,5 @@
             }
 
             .container .project{
-                width: 320px;
-               height: 320px;
-                text-align: center;
-                background-color: var(--accent-color); 
+                
             }
