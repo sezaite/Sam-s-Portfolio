@@ -6,6 +6,7 @@
 /* third party css */
 @import './font-awesome.min.css';
 /* components */
+@import './albums.css';
 @import './button.css';
 @import './form.css';
 @import './header.css';

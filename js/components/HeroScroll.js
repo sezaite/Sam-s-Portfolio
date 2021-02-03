@@ -1,4 +1,5 @@
 import { isValidAlbumSelector, isValidAlbumData } from './isValidData.js';
+import { renderAlbums } from './renderAlbums.js';
 
 //unnecessary comment
 
@@ -95,30 +96,13 @@ class HeroScroll {
         const dataCopy = [this.visibleArray[2], this.visibleArray[1], ...this.visibleArray, this.visibleArray[0], this.visibleArray[1]];
         for (let album of dataCopy) {
             HTML += `<div class="item" style="width: ${itemWidth}%">
-            <div class="project" style ="background-image: url('img/${album.imgLink}');">
-            <div class="blur" style ="background-image: url('img/${album.imgLink}');"></div>
-            <div class="project-wrap">
-                ${this.generateTitles(album.titles)}
-                <p>${album.description}</p>
-                <iframe ${album.spotifyLink}></iframe>
-                </div>
-            </div>
+            ${renderAlbums(album)}
         </div>`
         }
         return HTML;
 
     }
 
-    generateTitles(titles) {
-        let HTML = "";
-        for (let i = 0; i < titles.length; i++) {
-            HTML += `<h4>${titles[i]}</h4>`;
-        }
-        if (!HTML) {
-            console.error('Error: Could not generate items of an album');
-            return false;
-        } return HTML;
-    }
 
     generateDots() {
         let HTML = '';
