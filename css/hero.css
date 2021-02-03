@@ -46,8 +46,6 @@
 
 
         .container.hero .col-6 .project {
-            width: 340px;
-            height: 340px;
             margin-left: calc(50% - 170px);
             margin-bottom: 20px;
             /* background-image: url(../img/main-img.jpg); */

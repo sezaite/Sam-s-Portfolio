@@ -2,6 +2,10 @@
     background-size: cover;  
     overflow: hidden;
     position: relative;
+    width: 340px;
+    height: 340px;
+    text-align: center;
+    background-color: var(--accent-color);
 }
 
 .container .project .blur {
@@ -33,7 +37,7 @@
         opacity: 1;
     }
 
-    .container.hero .project > .project-wrap {
+    .container .project > .project-wrap {
         opacity: 0;
         width: 90%;
         height: 90%;
@@ -45,7 +49,7 @@
         z-index: 1;
     }
 
-    .container.hero .project .project-wrap.visible {
+    .container .project .project-wrap.visible {
         opacity: 1;
     }   
 
@@ -83,7 +87,7 @@
         transform: translate(-50%, -50%);
     }
 
-    .container .col-6 .project iframe{
+    .container .project iframe{
         width: 100%;
         position: absolute;
         bottom: 0;
