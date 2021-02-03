@@ -6,19 +6,27 @@ class WorkAlbums {
         this.selector = params.selector || 'body';
         this.data = params.data || [];
 
+        this.loadedAlbums = 0;
+
         this.DOM = null;
 
         this.init();
     }
 
     init() {
-        if (!this.isValidAlbumSelector()) {
+        if (!this.isValidSelector()) {
             return false;
         }
+        console.log(this.selector);
+        console.log(this.DOM);
         if (!isValidAlbumData(this.data)) {
             return false;
         }
+        console.log(this.selector);
         this.render();
+        console.log(this.DOM);
+        console.log(this.loadedAlbums);
+
     }
 
     render() {
@@ -28,12 +36,17 @@ class WorkAlbums {
         }
         if (!HTML) {
             console.error("I could not generate hTML content for albums in Work Section!");
+            return false;
         }
-        this.DOM.innerHTML = HTML;
+        const reference = document.querySelector(".insertBefore");
+        const element = document.createElement('div');
+        element.className = "row";
+        console.log(element);
+        element.innerHTML = HTML;
+        this.DOM.insertBefore(element, reference);
     }
 
-
-    isValidAlbumSelector() {
+    isValidSelector() {
         const selector = document.querySelector(this.selector);
         if (!selector) {
             console.error('Error: I cannot find a given selector in HTML file!');
@@ -44,6 +57,7 @@ class WorkAlbums {
         }
         this.DOM = selector;
         return true;
+
     }
 }
 

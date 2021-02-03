@@ -8,7 +8,6 @@ function renderAlbums(album) {
                 <iframe ${album.spotifyLink}></iframe>
                 </div>
             </div>`;
-    console.log(HTML);
     return HTML;
 }
 

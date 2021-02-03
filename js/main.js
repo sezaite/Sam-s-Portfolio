@@ -3,6 +3,7 @@ import { HoverFx } from './renderAlbums/HoverFx.js';
 import { albumData } from './data/albumData.js';
 import { HeroScroll } from './components/HeroScroll.js';
 import { WorkAlbums } from './components/WorkAlbums.js';
+import { workButtonCLick } from './components/buttonEventFunctions.js';
 
 new HeroScroll({
     selector: '.container.hero #project',
@@ -18,13 +19,15 @@ new HeroScroll({
 
 // };
 
-new WorkAlbums({
-    selector: '.container.work #projects',
-    data: albumData,
-});
+
 
 new HoverFx({
     selector: '.project-wrap',
+    data: albumData,
+});
+
+new WorkAlbums({
+    selector: '.container.work',
     data: albumData,
 });
 
@@ -39,6 +42,12 @@ function typeWriter() {
         setTimeout(typeWriter, speed);
     }
 }
+
+const button = document.querySelector('.container.work .btn');
+console.log(button);
+button.addEventListener('click', workButtonCLick);
+
+
 
 typeWriter();
 
