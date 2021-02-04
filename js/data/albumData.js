@@ -68,6 +68,22 @@ const albumData = [
         spotifyLink: 'src="https://open.spotify.com/embed/track/50yIjigJPcVQQxrHHeai4H" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"',
         isInHeroSection: false,
     }
+    ,
+    {
+        imgLink: 'img2.jpg',
+        titles: ['mixing', 'producing', 'singing'],
+        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro, explicabo placeat! Reprehenderit voluptate ratione praesentium quibusdam dignissimos?  Libero distinctio delectus repudiandae nobis itaque inventore architecto aut! Quia, odio?',
+        spotifyLink: 'src="https://open.spotify.com/embed/track/50yIjigJPcVQQxrHHeai4H" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"',
+        isInHeroSection: false,
+    }
+    ,
+    {
+        imgLink: 'img2.jpg',
+        titles: ['mixing', 'producing', 'singing'],
+        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro, explicabo placeat! Reprehenderit voluptate ratione praesentium quibusdam dignissimos?  Libero distinctio delectus repudiandae nobis itaque inventore architecto aut! Quia, odio?',
+        spotifyLink: 'src="https://open.spotify.com/embed/track/50yIjigJPcVQQxrHHeai4H" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"',
+        isInHeroSection: false,
+    }
 ]
 
 export { albumData }

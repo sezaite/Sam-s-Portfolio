@@ -41,7 +41,6 @@ class WorkAlbums {
         const reference = document.querySelector(".insertBefore");
         const element = document.createElement('div');
         element.className = "row";
-        console.log(element);
         element.innerHTML = HTML;
         this.DOM.insertBefore(element, reference);
     }
