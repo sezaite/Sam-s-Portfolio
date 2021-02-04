@@ -2,9 +2,11 @@
 import { albumData } from '../data/albumData.js';
 import { renderAlbums } from './renderAlbums.js';
 
+const parent = document.querySelector('.container.work');
+const button = document.querySelector('.container.work .btn');
+
 function workButtonCLick() {
     let HTML = "";
-    const parent = document.querySelector('.container.work');
     const displayedAlbums = document.querySelectorAll(".container.work .project");
     console.log(displayedAlbums.length);
     console.log(albumData.length);
@@ -19,16 +21,30 @@ function workButtonCLick() {
             for (let i = displayedAlbums.length; i < albumData.length; i++) {
                 HTML += `<div class="col-4">${renderAlbums(albumData[i])}</div>`
             }
+            button.innerText = "Collapse";
+            button.removeEventListener('click', workButtonCLick)
+            button.addEventListener('click', collapse);
         }
     } else {
         console.log("There's nothing to load more");
-        return false;
+
+
     }
     const reference = document.querySelector(".insertBefore");
     const element = document.createElement('div');
-    element.className = "row";
+    element.className = "row new";
     element.innerHTML = HTML;
     parent.insertBefore(element, reference);
+}
+
+function collapse() {
+    const allRows = document.querySelectorAll('.new');
+    for (let i = 0, len = allRows.length; i < len; i++) {
+        parent.removeChild(allRows[i]);
+    }
+    button.removeEventListener('click', collapse);
+    button.addEventListener('click', workButtonCLick);
+    button.innerText = "Load more";
 }
 
 export { workButtonCLick }
