@@ -3,6 +3,8 @@
 @import './reset.css';
 @import './layout.css';
 
+@import './about.css';
+
 /* third party css */
 @import './font-awesome.min.css';
 /* components */
