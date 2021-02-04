@@ -10,7 +10,6 @@ class HoverFx {
         this.init();
     }
 
-
     init() {
         if (!this.isValidAlbumSelector()) {
             return false;
@@ -18,7 +17,6 @@ class HoverFx {
         if (!this.isValidData()) {
             return false;
         }
-        console.log('pradesiu ivykius')
         this.hover();
     }
 
@@ -32,7 +30,6 @@ class HoverFx {
             return false;
         }
         this.projectsList = selectors;
-        console.log(selectors);
 
         return true;
     }
@@ -43,24 +40,6 @@ class HoverFx {
         }
         return true;
     }
-
-    // addEvents() {
-    //     console.log('pradedu nuuuuuuuuu')
-    //     for (let i = 0; i < this.projectsList.length; i++) {
-    //         console.log(this.projectsList[i]);
-    //         let p = this.projectsList[i];
-    //         p.addEventListener('mouseenter', () => {
-
-    //             console.log('atejau');
-    //             this.hover(i);
-    //         })
-    //     }
-    // }
-
-    // hover(projectIndex) {
-    //     const project = this.projectsList[projectIndex];
-    //     project.classList.add('visable');
-    // }
 
 
 
@@ -79,19 +58,6 @@ class HoverFx {
             });
 
         });
-
-
-        // blurLayers.forEach((layer) => {
-        //     console.log('latadsgadsfasdS');
-        //     layer.addEventListener("mouseover", function () {
-        //         layer.classList.add('visible');
-        //         console.log('atejau')
-        //     });
-        //     layer.addEventListener("mouseover", function () {
-        //         layer.classList.remove('visible');
-        //         console.log('isejau')
-        //     });
-        // });
     }
 }
 

@@ -17,16 +17,10 @@ class WorkAlbums {
         if (!this.isValidSelector()) {
             return false;
         }
-        console.log(this.selector);
-        console.log(this.DOM);
         if (!isValidAlbumData(this.data)) {
             return false;
         }
-        console.log(this.selector);
         this.render();
-        console.log(this.DOM);
-        console.log(this.loadedAlbums);
-
     }
 
     render() {
@@ -56,7 +50,6 @@ class WorkAlbums {
         }
         this.DOM = selector;
         return true;
-
     }
 }
 

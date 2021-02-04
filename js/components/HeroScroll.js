@@ -34,7 +34,6 @@ class HeroScroll {
             console.error('Error: there are no album elements to display in hero section');
             return false;
         }
-        console.log(this.DOM);
         this.render();
         this.addEvents();
     }
@@ -80,7 +79,6 @@ class HeroScroll {
     }
 
     createNewArray() {
-        console.log(this.data);
         for (let i = 0; i < this.data.length; i++) {
             if (!this.data[i].isInHeroSection) {
                 continue;

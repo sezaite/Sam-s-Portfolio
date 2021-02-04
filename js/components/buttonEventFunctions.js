@@ -1,6 +1,7 @@
 
 import { albumData } from '../data/albumData.js';
 import { renderAlbums } from './renderAlbums.js';
+import { HoverFx } from '../renderAlbums/HoverFx.js';
 
 const parent = document.querySelector('.container.work');
 const button = document.querySelector('.container.work .btn');
@@ -8,8 +9,6 @@ const button = document.querySelector('.container.work .btn');
 function workButtonCLick() {
     let HTML = "";
     const displayedAlbums = document.querySelectorAll(".container.work .project");
-    console.log(displayedAlbums.length);
-    console.log(albumData.length);
     let a = displayedAlbums.length;
     let b = displayedAlbums.length + 3;
     if (albumData.length > displayedAlbums.length) {
@@ -29,8 +28,6 @@ function workButtonCLick() {
 
     else {
         console.log("There's nothing to load more");
-
-
     }
 
     const reference = document.querySelector(".insertBefore");
@@ -42,12 +39,15 @@ function workButtonCLick() {
     scroll({
         behavior: 'smooth',
         top: (button.offsetTop + button.clientHeight + 40) - innerHeight,
-    })
+    });
 
+    new HoverFx({
+        selector: '.project-wrap',
+        data: albumData,
+    });
 }
 
 function collapse() {
-
     const allRows = document.querySelectorAll('.new');
     for (let i = 0, len = allRows.length; i < len; i++) {
         parent.removeChild(allRows[i]);

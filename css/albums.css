@@ -37,7 +37,7 @@
         opacity: 1;
     }
 
-    .container .project > .project-wrap {
+    .container .project .project-wrap {
         opacity: 0;
         width: 90%;
         height: 90%;
