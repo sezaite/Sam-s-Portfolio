@@ -25,19 +25,29 @@ function workButtonCLick() {
             button.removeEventListener('click', workButtonCLick)
             button.addEventListener('click', collapse);
         }
-    } else {
+    }
+
+    else {
         console.log("There's nothing to load more");
 
 
     }
+
     const reference = document.querySelector(".insertBefore");
     const element = document.createElement('div');
     element.className = "row new";
     element.innerHTML = HTML;
     parent.insertBefore(element, reference);
+
+    scroll({
+        behavior: 'smooth',
+        top: (button.offsetTop + button.clientHeight + 40) - innerHeight,
+    })
+
 }
 
 function collapse() {
+
     const allRows = document.querySelectorAll('.new');
     for (let i = 0, len = allRows.length; i < len; i++) {
         parent.removeChild(allRows[i]);
@@ -45,6 +55,10 @@ function collapse() {
     button.removeEventListener('click', collapse);
     button.addEventListener('click', workButtonCLick);
     button.innerText = "Load more";
+    button.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end',
+    });
 }
 
 export { workButtonCLick }

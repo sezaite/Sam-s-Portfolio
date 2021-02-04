@@ -32,7 +32,11 @@ const button = document.querySelector('.container.work .btn');
 console.log(button);
 button.addEventListener('click', workButtonCLick);
 
-
+const mygtukas = document.querySelector('.work .btn');
+window.addEventListener('scroll', function () {
+    console.log("ekrano scroll: " + scrollY);
+    console.log("mygtuko pozicija: " + button.offsetTop);
+})
 
 typeWriter();
 
