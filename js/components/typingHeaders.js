@@ -1,11 +1,15 @@
-
-const txt = 'Musician | Producer | Mixer'; /* The text */
-const speed = 50; /* The speed/duration of the effect in milliseconds */
+let i = 0;
+const txt = 'Producer  |  Ex-vegan  |  First-time visitor to Lithuania';
+const speed = 100;
 
 function typeWriter() {
-    for (let i = 0; i < txt.length; i++) {
+
+
+    if (i < txt.length) {
         document.querySelector(".hero .titles").innerHTML += txt.charAt(i);
+        i++;
         setTimeout(typeWriter, speed);
     }
 }
 
+export { typeWriter };

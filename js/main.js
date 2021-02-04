@@ -4,6 +4,7 @@ import { albumData } from './data/albumData.js';
 import { HeroScroll } from './components/HeroScroll.js';
 import { WorkAlbums } from './components/WorkAlbums.js';
 import { workButtonCLick } from './components/buttonEventFunctions.js';
+import { typeWriter } from './components/typingHeaders.js'
 
 new HeroScroll({
     selector: '.container.hero #project',
@@ -12,14 +13,8 @@ new HeroScroll({
     areDotsVisible: true,
 });
 
-// if(!HeroScroll){
-//     console.error('Error: I could not generate any content for projects in hero!');
-//     return false;
-// } else {
 
-// };
-
-
+typeWriter();
 
 new HoverFx({
     selector: '.project-wrap',
@@ -31,17 +26,7 @@ new WorkAlbums({
     data: albumData,
 });
 
-let i = 0;
-const txt = 'Producer  |  Ex-vegan  |  First-time visitor to Lithuania';
-const speed = 50;
 
-function typeWriter() {
-    if (i < txt.length) {
-        document.querySelector(".hero .titles").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-    }
-}
 
 const button = document.querySelector('.container.work .btn');
 console.log(button);
