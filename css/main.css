@@ -4,11 +4,13 @@
 @import './layout.css';
 
 @import './about.css';
+@import './blog.css';
 
 /* third party css */
 @import './font-awesome.min.css';
 /* components */
 @import './albums.css';
+@import './article.css';
 @import './button.css';
 @import './form.css';
 @import './header.css';

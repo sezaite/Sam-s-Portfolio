@@ -23,6 +23,7 @@
 
     .btn.circle {
         position: absolute;
+        font-family: var(--main-font);
         top: -24px;
         right: 190px;
         padding: 10px;
@@ -33,9 +34,23 @@
         justify-content: center;
         align-items: center;
         letter-spacing: 0;
-        
-        
-    }   
+    }  
+    
+    .btn.article-btn {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 30px;
+        font-size: 14px;
+        padding: 8px;
+        line-height: 1;
+        margin-top: 10px;
+    }
+
+    .btn.blog-btn {
+        margin-top: 40px;
+        width: 170px;
+    }
 
     
         
