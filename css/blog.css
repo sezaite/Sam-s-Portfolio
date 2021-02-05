@@ -36,7 +36,6 @@
 
 .container.blog article {
     background-color: var(--secondary-color);
-    padding-bottom: 40px ;
 }
 
 .container.blog img {
