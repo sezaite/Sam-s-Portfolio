@@ -2,7 +2,7 @@
     
 }
 
-.container.news .col-3 {
+.container .col-3 {
     width: 280px;
     height: 300px;
 }
@@ -44,6 +44,7 @@
 }
 
 .container .article-wrapper h5 {
+    font-size: 18px;
     margin: 20px 0;
 }
 

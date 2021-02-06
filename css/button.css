@@ -44,7 +44,11 @@
    
 /*previous and next btn*/
     .btn.blog-btn {
-        margin-top: 40px;
+        margin: 40px 0;
+        width: 170px;
+    }
+
+    .btn.about-btn {
         width: 170px;
     }
 

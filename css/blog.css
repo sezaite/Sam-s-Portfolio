@@ -9,8 +9,8 @@
     margin-bottom: 20px;
 }
 
-.container.blog-hero h2 {
-    text-align: start;
+.container.blog-hero h4 {
+    margin: 10px 200px;
 }
 
 .container.blog {
@@ -29,7 +29,7 @@
 }
 
 .container.blog .row article p {
-    width: 700px;
+    width: 900px;
     text-align: center;
     margin: 20px auto;
 }
