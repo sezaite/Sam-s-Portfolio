@@ -32,38 +32,57 @@ const loadedElements = list.querySelectorAll('.project');
 
 function workButtonCLick() {
     if (loadedElements.length < albumData.length) {
-        if (loadedElements.length % 2 == 0) {
-            //load 4 more
+        if (innerWidth > 1300) {
+            if (loadedElements.length % 2 == 0) {
+                //uzkrauti dar keturis
+            } else {
+                //uzkrauti penkis
+            }
+        } else if (innerWidth > 1080) {
+            if (loadedElements.length % 2 == 0) {
+                //uzkrauti dar keturis
+            } else {
+                //uzkrauti dar tris
+            }
+        } else if (innerWidth > 680) {
+            if (loadedElements.length % 2 == 0) {
+                //uzkrauti dar du
+            } else {
+                //uzkrauti dar tris
+            }
+        } else {
+            //uzkrauti du?
         }
-        else {
-            button.innerText = "Collapse";
-            button.removeEventListener('click', workButtonCLick)
-            button.addEventListener('click', collapse);
-        }
-
-        scroll({
-            behavior: 'smooth',
-            top: (button.offsetTop + button.clientHeight + 40) - innerHeight,
-        });
-
-        new HoverFx({
-            selector: '.project-wrap',
-            data: albumData,
-        });
+    }
+    else {
+        button.innerText = "Collapse";
+        button.removeEventListener('click', workButtonCLick)
+        button.addEventListener('click', collapse);
     }
 
-    function collapse() {
-        const allRows = document.querySelectorAll('.new');
-        for (let i = 0, len = allRows.length; i < len; i++) {
-            parent.removeChild(allRows[i]);
-        }
-        button.removeEventListener('click', collapse);
-        button.addEventListener('click', workButtonCLick);
-        button.innerText = "Load more";
-        button.scrollIntoView({
-            behavior: 'smooth',
-            block: 'end',
-        });
-    }
+    scroll({
+        behavior: 'smooth',
+        top: (button.offsetTop + button.clientHeight + 40) - innerHeight,
+    });
 
-    export { workButtonCLick }
+    new HoverFx({
+        selector: '.project-wrap',
+        data: albumData,
+    });
+}
+
+function collapse() {
+    const allRows = document.querySelectorAll('.new');
+    for (let i = 0, len = allRows.length; i < len; i++) {
+        parent.removeChild(allRows[i]);
+    }
+    button.removeEventListener('click', collapse);
+    button.addEventListener('click', workButtonCLick);
+    button.innerText = "Load more";
+    button.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end',
+    });
+}
+
+export { workButtonCLick }
