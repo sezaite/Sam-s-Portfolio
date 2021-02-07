@@ -27,34 +27,19 @@ if (!container) {
 }
 
 const loadedElements = list.querySelectorAll('.project');
-
-
+const albumsPlacement = this.DOM.querySelector('.col-12.row.list');
 
 function workButtonCLick() {
+    let HTML = albumsPlacement.innerHTML;
+    console.log(HTML);
     if (loadedElements.length < albumData.length) {
-        if (innerWidth > 1300) {
-            if (loadedElements.length % 2 == 0) {
-                //uzkrauti dar keturis
-            } else {
-                //uzkrauti penkis
-            }
-        } else if (innerWidth > 1080) {
-            if (loadedElements.length % 2 == 0) {
-                //uzkrauti dar keturis
-            } else {
-                //uzkrauti dar tris
-            }
-        } else if (innerWidth > 680) {
-            if (loadedElements.length % 2 == 0) {
-                //uzkrauti dar du
-            } else {
-                //uzkrauti dar tris
-            }
-        } else {
-            //uzkrauti du?
+        const whereToStart = loadedElements.length;
+        const howManyToLoad = loadedElements.length + howManyToLoad();
+        for (let i = whereToStart; i < howManyToLoad; i++) {
+            HTML += `<div class="project-column col-lg-4 col-3 col-md-6 col-xs-12">${renderAlbums(this.data[i])}</div>`;
         }
-    }
-    else {
+
+    } else {
         button.innerText = "Collapse";
         button.removeEventListener('click', workButtonCLick)
         button.addEventListener('click', collapse);
@@ -83,6 +68,30 @@ function collapse() {
         behavior: 'smooth',
         block: 'end',
     });
+}
+
+function howManyToLoad() {
+    if (innerWidth > 1300) {
+        if (loadedElements.length % 2 == 0) {
+            return 4;
+        } else {
+            return 5;
+        }
+    } else if (innerWidth > 1080) {
+        if (loadedElements.length % 2 == 0) {
+            return 4;
+        } else {
+            return 3;
+        }
+    } else if (innerWidth > 680) {
+        if (loadedElements.length % 2 == 0) {
+            return 2;
+        } else {
+            return 3;
+        }
+    } else {
+        return 2;
+    }
 }
 
 export { workButtonCLick }
