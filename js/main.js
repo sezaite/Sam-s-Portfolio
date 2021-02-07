@@ -13,10 +13,10 @@ new HeroScroll({
     areDotsVisible: true,
 });
 
-
 typeWriter();
 
-new WorkAlbums({
+
+const pirmasUzkrovimas = new WorkAlbums({
     selector: '.container.work',
     data: albumData,
 });
@@ -26,11 +26,12 @@ new HoverFx({
     data: albumData,
 });
 
+console.log(pirmasUzkrovimas.howManyAlbums());
+console.log('sveiki');
+
 
 const button = document.querySelector('.container.work .btn');
-
 button.addEventListener('click', workButtonCLick);
-
 
 typeWriter();
 

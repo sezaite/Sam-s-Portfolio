@@ -26,42 +26,44 @@ if (!container) {
     console.log(container);
 }
 
+const loadedElements = list.querySelectorAll('.project');
+
+
+
 function workButtonCLick() {
-    if (list.clientHeight < container.clientHeight) {
-        console.log('yes list is shorter than container');
-        console.log(list.clientHeight);
-        list.setAttribute("style", `height: ${list.clientHeight + 300}px;`);
+    if (loadedElements.length < albumData.length) {
+        if (loadedElements.length % 2 == 0) {
+            //load 4 more
+        }
+        else {
+            button.innerText = "Collapse";
+            button.removeEventListener('click', workButtonCLick)
+            button.addEventListener('click', collapse);
+        }
+
+        scroll({
+            behavior: 'smooth',
+            top: (button.offsetTop + button.clientHeight + 40) - innerHeight,
+        });
+
+        new HoverFx({
+            selector: '.project-wrap',
+            data: albumData,
+        });
     }
-    else {
-        console.log('list is bigger than container now');
-        button.innerText = "Collapse";
-        button.removeEventListener('click', workButtonCLick)
-        button.addEventListener('click', collapse);
+
+    function collapse() {
+        const allRows = document.querySelectorAll('.new');
+        for (let i = 0, len = allRows.length; i < len; i++) {
+            parent.removeChild(allRows[i]);
+        }
+        button.removeEventListener('click', collapse);
+        button.addEventListener('click', workButtonCLick);
+        button.innerText = "Load more";
+        button.scrollIntoView({
+            behavior: 'smooth',
+            block: 'end',
+        });
     }
 
-    scroll({
-        behavior: 'smooth',
-        top: (button.offsetTop + button.clientHeight + 40) - innerHeight,
-    });
-
-    new HoverFx({
-        selector: '.project-wrap',
-        data: albumData,
-    });
-}
-
-function collapse() {
-    const allRows = document.querySelectorAll('.new');
-    for (let i = 0, len = allRows.length; i < len; i++) {
-        parent.removeChild(allRows[i]);
-    }
-    button.removeEventListener('click', collapse);
-    button.addEventListener('click', workButtonCLick);
-    button.innerText = "Load more";
-    button.scrollIntoView({
-        behavior: 'smooth',
-        block: 'end',
-    });
-}
-
-export { workButtonCLick }
+    export { workButtonCLick }

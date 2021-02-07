@@ -25,9 +25,9 @@ class WorkAlbums {
 
     render() {
         let HTML = "";
-        this.how
         for (let i = 0; i < this.howManyAlbums(); i++) {
             HTML += `<div class="project-column col-lg-4 col-3 col-md-6 col-xs-12">${renderAlbums(this.data[i])}</div>`;
+            this.loadedAlbums += this.howManyAlbums();
         }
         if (!HTML) {
             console.error("I could not generate hTML content for albums in Work Section!");
@@ -64,5 +64,6 @@ class WorkAlbums {
         return true;
     }
 }
+
 
 export { WorkAlbums };
