@@ -5,7 +5,7 @@ header.container {
     left: 0;
     height: 80px;
     padding: 30px 0;
-    z-index: 2;
+    z-index: 4;
 }
 
     header.container .logo > img {

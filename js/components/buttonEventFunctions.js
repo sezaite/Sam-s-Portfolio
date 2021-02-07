@@ -4,37 +4,40 @@ import { renderAlbums } from './renderAlbums.js';
 import { HoverFx } from '../renderAlbums/HoverFx.js';
 
 const parent = document.querySelector('.container.work');
+if (!parent) {
+    console.error("Error: cannnot find parent element");
+}
 const button = document.querySelector('.container.work .btn');
+if (!button) {
+    console.error("Error: cannnot find button element");
+} else {
+    console.log(button);
+}
+const list = document.querySelector('.container.work .list.row');
+if (!list) {
+    console.error("Error: cannnot find list element");
+} else {
+    console.log(list);
+}
+const container = document.querySelector('.container.row');
+if (!container) {
+    console.error("Error: cannnot find container element");
+} else {
+    console.log(container);
+}
 
 function workButtonCLick() {
-    let HTML = "";
-    const displayedAlbums = document.querySelectorAll(".container.work .project");
-    let a = displayedAlbums.length;
-    let b = displayedAlbums.length + 3;
-    if (albumData.length > displayedAlbums.length) {
-        if (albumData.length - displayedAlbums.length > 3) {
-            for (let i = a; i < b; i++) {
-                HTML += `<div class="col-4">${renderAlbums(albumData[i])}</div>`
-            }
-        } else {
-            for (let i = displayedAlbums.length; i < albumData.length; i++) {
-                HTML += `<div class="col-4">${renderAlbums(albumData[i])}</div>`
-            }
-            button.innerText = "Collapse";
-            button.removeEventListener('click', workButtonCLick)
-            button.addEventListener('click', collapse);
-        }
+    if (list.clientHeight < container.clientHeight) {
+        console.log('yes list is shorter than container');
+        console.log(list.clientHeight);
+        list.setAttribute("style", `height: ${list.clientHeight + 300}px;`);
     }
-
     else {
-        console.log("There's nothing to load more");
+        console.log('list is bigger than container now');
+        button.innerText = "Collapse";
+        button.removeEventListener('click', workButtonCLick)
+        button.addEventListener('click', collapse);
     }
-
-    const reference = document.querySelector(".insertBefore");
-    const element = document.createElement('div');
-    element.className = "row new";
-    element.innerHTML = HTML;
-    parent.insertBefore(element, reference);
 
     scroll({
         behavior: 'smooth',

@@ -25,18 +25,30 @@ class WorkAlbums {
 
     render() {
         let HTML = "";
-        for (let i = 0; i < 3; i++) {
-            HTML += `<div class="col-4">${renderAlbums(this.data[i])}</div>`;
+        this.how
+        for (let i = 0; i < this.howManyAlbums(); i++) {
+            HTML += `<div class="project-column col-lg-4 col-3 col-md-6 col-xs-12">${renderAlbums(this.data[i])}</div>`;
         }
         if (!HTML) {
             console.error("I could not generate hTML content for albums in Work Section!");
             return false;
         }
-        const reference = document.querySelector(".insertBefore");
-        const element = document.createElement('div');
-        element.className = "row";
-        element.innerHTML = HTML;
-        this.DOM.insertBefore(element, reference);
+        const albumsPlacement = this.DOM.querySelector('.col-12.row.list');
+        if (!albumsPlacement) {
+            console.error("Error: I cannot find where to place albums in your index Work section");
+            return false;
+        }
+        albumsPlacement.innerHTML = HTML;
+    }
+
+    howManyAlbums() {
+        if (innerWidth > 1300) {
+            return 4;
+        } else if (innerWidth > 1080) {
+            return 3;
+        } else if (innerWidth > 680) {
+            return 2;
+        } return 1;
     }
 
     isValidSelector() {

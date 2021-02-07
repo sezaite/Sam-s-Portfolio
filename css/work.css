@@ -2,8 +2,13 @@
     min-height: 100vh;
 }
 
+.container.work .list.row {
+    overflow: hidden;
+
+}
+
     .container.work > .row {
-        
+        padding: 0;
     }
 
         .container.work > .row > .col-12 {

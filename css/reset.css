@@ -22,7 +22,3 @@ a {
         color: var(--accent-color);
         opacity: 1;
     }
-
-    .fa {
-        font-family: var(--main-font);
-    }

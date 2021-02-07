@@ -1,7 +1,9 @@
-.container  {
-    
-}
+.container.news .list.row {
 
+    height: 300px;
+    overflow: hidden;
+
+}
 .container .col-3 {
     width: 280px;
     height: 300px;
@@ -18,7 +20,7 @@
 }
 
 .container .col-3 .article:hover {
-    transform: scale(1.02);
+    /* transform: scale(1.02); */
 }
 
 .container .col-3 .article::after {
