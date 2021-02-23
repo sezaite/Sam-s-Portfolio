@@ -37,8 +37,8 @@
     position: absolute;
     font-size: 20px;
     left: 0;
-    top: 290px;
-    width: 300px;
+    top: 330px;
+    width: 350px;
     text-align: center;
 
 }
@@ -48,15 +48,15 @@
 }
 
 .container.work-item img {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     position: absolute;
     top: -40px;
     left: 0;
 }
 
 .container.work-item .work-right {
-    margin: 40px 0 80px 0;
+    margin: 50px 0 100px 0;
 }
 
 .container.work-item .work-right iframe {
