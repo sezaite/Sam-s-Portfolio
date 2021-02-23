@@ -1,18 +1,33 @@
 import { albumData } from '../data/albumData.js';
 
-function renderAlbums(album) {
-    let HTML = "";
-    HTML += `<div class="project" style ="background-image: url('img/${album.imgLink}');">
-            <div class="blur" style ="background-image: url('img/${album.imgLink}');"></div>
-            <div class="project-wrap">
-                ${generateTitles(album.titles)}
-                <p>${album.description}</p>
-                <iframe ${album.spotifyLink}></iframe>
-                </div>
-            </div>`;
-    return HTML;
+function generateWorkProjects(selector) {
+    const DOM = document.querySelector(selector);
+    let HTML = '';
+    for (let album of albumData) {
+        HTML += `<section class="container work-item">
+    <div class="row">
+        <div class="col-4 col-lg-3 work-left">
+            <img src="${album.imgLink}" alt="album_art">
+            <h3>${album.name}</h3>
+        </div>
+        <div class="col-8 work-right">
+            <h5 class="date">${album.date}</h5>
+            <h5> ${generateTitles(album.titles)}</h5>
+            <p class="work-projects">
+                ${album.p}</a>
+            </p>
+            <iframe ${album.spotifyLink}></iframe>
+        </div>
+    </div>
+</section>`
+    }
+    if (!HTML) {
+        console.error('Error: failed to generate Albums HTML');
+        return false;
+    } else {
+        DOM.innerHTML = HTML;
+    }
 }
-
 function generateTitles(titles) {
     let HTML = "";
     for (let i = 0; i < titles.length; i++) {
@@ -24,4 +39,7 @@ function generateTitles(titles) {
     } return HTML;
 }
 
-export { renderAlbums };
+
+
+
+export { generateWorkProjects };
