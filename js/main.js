@@ -5,6 +5,7 @@ import { HeroScroll } from './components/HeroScroll.js';
 import { WorkAlbums } from './components/WorkAlbums.js';
 import { workButtonCLick } from './components/buttonEventFunctions.js';
 import { typeWriter } from './components/typingHeaders.js'
+import { generateWorkProjects } from '../js/workJS/renderProjects.js'
 
 new HeroScroll({
     selector: '.container.hero #project',
@@ -29,6 +30,7 @@ new HoverFx({
 console.log(pirmasUzkrovimas.howManyAlbums());
 console.log('sveiki');
 
+generateWorkProjects('#work-page-projects');
 
 const button = document.querySelector('.container.work .btn');
 button.addEventListener('click', workButtonCLick);
