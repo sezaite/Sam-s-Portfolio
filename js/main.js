@@ -1,11 +1,14 @@
-import { HoverFx } from './renderAlbums/HoverFx.js';
+import { HoverFx } from './components/heroJS/HoverFx.js';
 
 import { albumData } from './data/albumData.js';
-import { HeroScroll } from './components/HeroScroll.js';
-import { WorkAlbums } from './components/WorkAlbums.js';
-import { workButtonCLick } from './components/buttonEventFunctions.js';
-import { typeWriter } from './components/typingHeaders.js'
-import { generateWorkProjects } from '../js/workJS/renderProjects.js'
+import { HeroScroll } from './components/heroJS/HeroScrollView.js';
+
+// import { workButtonCLick } from './components/buttonEventFunctions.js';
+import { typeWriter } from './components/heroJS/typingHeaders.js'
+import { generateWorkProjects } from './components/workJS/renderProjects.js'
+
+
+generateWorkProjects('#work-page-projects');
 
 new HeroScroll({
     selector: '.container.hero #project',
@@ -30,10 +33,10 @@ new HoverFx({
 console.log(pirmasUzkrovimas.howManyAlbums());
 console.log('sveiki');
 
-generateWorkProjects('#work-page-projects');
+
 
 const button = document.querySelector('.container.work .btn');
-button.addEventListener('click', workButtonCLick);
+// button.addEventListener('click', workButtonCLick);
 
 typeWriter();
 
