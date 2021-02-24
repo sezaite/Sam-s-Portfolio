@@ -1,4 +1,4 @@
-import { isValidAlbumSelector, isValidAlbumData } from '../components/isValidData.js';
+import { isValidAlbumSelector, isValidAlbumData } from '../../components/isValidData.js';
 
 
 class HoverFx {

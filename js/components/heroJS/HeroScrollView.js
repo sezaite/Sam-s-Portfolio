@@ -1,5 +1,5 @@
-import { isValidAlbumSelector, isValidAlbumData } from './isValidData.js';
-import { renderAlbums } from './renderAlbums.js';
+import { isValidAlbumSelector, isValidAlbumData } from '../isValidData.js';
+import { renderAlbums } from './renderHeroAlbums.js';
 
 //unnecessary comment
 
@@ -17,7 +17,7 @@ class HeroScroll {
         this.activeDotIndex = 0;
 
         this.visibleArray = [];
-
+        console.log('atejau iki cia');
         this.init();
 
     }
