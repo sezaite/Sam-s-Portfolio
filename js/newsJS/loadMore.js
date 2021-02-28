@@ -8,48 +8,39 @@ if (!parent) {
 const button = document.querySelector('.container.other-blogs .btn');
 if (!button) {
     console.error("Error: cannnot find button element");
-} else {
-    console.log(button);
 }
 const list = document.querySelector('.container.other-blogs .row.list');
 if (!list) {
     console.error("Error: cannnot find list element");
-} else {
-    console.log(list);
 }
 
-const loadedElements = list.querySelectorAll('.other-blogs .article');
+let loadedElements = null;
 
-function checkViewport() {
-    if (innerWidth > 1300) {
-        if (loadedElements.length % 2 == 0) {
-            return 4;
+function checkViewport(howManyLeft) {
+    if (howManyLeft > 5) {
+        if (innerWidth > 1080) {
+            return loadedElements.length % 2 == 0 ? 4 : 3;
+        } else if (innerWidth > 680) {
+            return loadedElements.length % 2 == 0 ? 2 : 3;
         } else {
-            return 5;
-        }
-    } else if (innerWidth > 1080) {
-        if (loadedElements.length % 2 == 0) {
-            return 4;
-        } else {
-            return 3;
-        }
-    } else if (innerWidth > 680) {
-        if (loadedElements.length % 2 == 0) {
             return 2;
-        } else {
-            return 3;
         }
     } else {
-        return 2;
+        return howManyLeft;
     }
 }
-
 function generateArticleRow() {
+    loadedElements = list.querySelectorAll('.other-blogs .article');
+    if (!loadedElements) {
+        console.error('Error: something went wrong with your article list');
+    }
+    console.log(loadedElements.length);
+    console.log(blogData.length);
     let HTML = list.innerHTML;
-    console.log(HTML);
     if (loadedElements.length < blogData.length) {
         const whereToStart = loadedElements.length;
-        const howManyToLoad = loadedElements.length + checkViewport();
+        const howManyLeft = blogData.length - whereToStart;
+        const howManyToLoad = loadedElements.length + checkViewport(howManyLeft);
         for (let i = whereToStart; i < howManyToLoad; i++) {
             HTML += `<div class="article-column col-lg-4 col-3 col-md-6 col-xs-12">${renderArticles(blogData[i])}</div>`;
         }
@@ -80,4 +71,4 @@ function collapse() {
 }
 
 
-export { generateArticleRow }
+export { generateArticleRow };

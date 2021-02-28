@@ -9,4 +9,4 @@ if (!button) {
     console.error("Error: cannnot find button element");
 }
 console.log(button);
-button.addEventListener('click', generateArticleRow());
+button.addEventListener('click', generateArticleRow);
