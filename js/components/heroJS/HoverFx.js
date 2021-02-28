@@ -1,6 +1,5 @@
 import { isValidAlbumSelector, isValidAlbumData } from '../../components/isValidData.js';
 
-
 class HoverFx {
     constructor(params) {
         this.selector = params.selector;
@@ -8,6 +7,7 @@ class HoverFx {
 
         this.projectsList = null;
         this.init();
+        console.log('hoverinu');
     }
 
     init() {
@@ -41,10 +41,8 @@ class HoverFx {
         return true;
     }
 
-
-
     hover() {
-        const albums = document.querySelectorAll(".project");
+        const albums = document.querySelectorAll(".album-art");
         albums.forEach((album) => {
             const wrap = album.querySelector(".project-wrap");
             const blur = album.querySelector(".blur");
@@ -60,7 +58,5 @@ class HoverFx {
         });
     }
 }
-
-
 
 export { HoverFx };
