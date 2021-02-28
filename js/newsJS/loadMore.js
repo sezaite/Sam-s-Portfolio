@@ -17,14 +17,8 @@ if (!list) {
 let loadedElements = null;
 
 function checkViewport(howManyLeft) {
-    if (howManyLeft > 5) {
-        if (innerWidth > 1080) {
-            return loadedElements.length % 2 == 0 ? 4 : 3;
-        } else if (innerWidth > 680) {
-            return loadedElements.length % 2 == 0 ? 2 : 3;
-        } else {
-            return 2;
-        }
+    if {
+        //parasyti responsive logika
     } else {
         button.innerText = "Collapse";
         button.removeEventListener('click', generateArticleRow)
