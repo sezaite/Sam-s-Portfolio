@@ -6,7 +6,7 @@ import { HeroScroll } from './components/heroJS/HeroScrollView.js';
 typeWriter();
 
 new HeroScroll({
-    selector: '.container.hero .project-side',
+    selector: '.container.hero .project-side .view',
     data: albumData,
     pseudoCount: 2,
     areDotsVisible: true,

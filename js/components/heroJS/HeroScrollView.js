@@ -40,12 +40,11 @@ class HeroScroll {
 
     render() {
         const listWidth = (this.visibleArray.length + 2 * this.pseudoCount) * 100;
-        const HTML = `<div class='view'>
+        const HTML = `
         <div class="list" style="width: ${listWidth}%; margin-left: -${this.pseudoCount}00%;">
            ${this.generateHeroAlbums()}
         </div>
         <div class="controls">${this.generateDots()}</div>
-        <button class='btn'>Show all projects</button>
     </div>`;
 
         this.DOM.innerHTML = HTML;

@@ -3,45 +3,31 @@
     text-align: center;
 }
 .container.blog-hero h1 {
-    font-size: 60px;
+    font-size: 50px;
     display: inline-block;
     width: 100%;
     margin-bottom: 20px;
-}
-
-.container.blog-hero h4 {
-    margin: 10px 200px;
 }
 
 .container.blog {
     text-align: center;
 }
 
-.container.blog article h2 {
-    text-align: center;
-    
-}
-
-.container.blog h2 {
-    text-align: start;
-    margin-bottom: 20px;
-    
-}
+.container.blog article h2 { 
+        margin: 20px 0;
+        text-align: start;
+        margin-left: 70px;
+    }
 
 .container.blog .row article p {
-    width: 900px;
-    text-align: center;
-    margin: 20px auto;
+    line-height: 1.4;
+    text-align: start;
+    margin: 10px 70px;
 }
 
-.container.blog article {
-    background-color: var(--secondary-color);
-}
 
 .container.blog img {
     width: 700px;
-    margin-top: 40px;
-
 }
 
 .container.other-blogs {

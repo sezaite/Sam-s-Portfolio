@@ -3,6 +3,15 @@
     text-align: center;
 }
 
-.container.about p {
-    margin: 30px 0;
+.container.about h2 {
+    text-align: start;
+}
+
+.container.about .about-p {
+    text-align: start;
+}
+
+.container.about img {
+    text-align: start;
+    float: left;
 }
