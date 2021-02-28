@@ -1,7 +1,6 @@
 import { isValidAlbumSelector, isValidAlbumData } from '../isValidData.js';
 import { renderAlbums } from './renderHeroAlbums.js';
 
-//unnecessary comment
 
 class HeroScroll {
     constructor(params) {
@@ -19,6 +18,7 @@ class HeroScroll {
         this.visibleArray = [];
         console.log('atejau iki cia');
         this.init();
+        console.log(this.DOM);
 
     }
 
@@ -98,7 +98,6 @@ class HeroScroll {
         </div>`
         }
         return HTML;
-
     }
 
 
@@ -119,10 +118,7 @@ class HeroScroll {
         this.dotsDOM[this.activeDotIndex].classList.remove('active');
         this.activeDotIndex = dotIndex;
         dot.classList.add('active');
-
     }
-
-
 
     isValidAlbumSelector() {
         const selector = document.querySelector(this.selector);
@@ -145,7 +141,6 @@ class HeroScroll {
     }
 
 }
-
 
 
 export { HeroScroll }

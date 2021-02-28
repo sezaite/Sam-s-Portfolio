@@ -1,19 +1,16 @@
-.container .project-column {
+.container.hero .col-6 .album-art {
+    margin-left: calc(50% - 170px);
+    margin-bottom: 20px;
     width: 340px;
-    height: 340px;
-}
-
-.container .project {
+    height: 340px;   
     background-size: cover;  
     overflow: hidden;
     position: relative;
-    width: 100%;
-    height: 100%;
     text-align: center;
     background-color: var(--accent-color);
 }
 
-.container .project .blur {
+.container.hero .blur {
     background-size: cover;
     position: absolute;
     top: 0;
@@ -25,7 +22,7 @@
     transition: all 0.5s linear;
 }
 
-.container .project .blur:before {
+.container.hero .blur:before {
     content: '';
     background-color: #000;
     opacity: 0.6;
@@ -37,12 +34,11 @@
     left: 0;
   }
 
-    .container .project .blur.visible {
-        /* transform: scale(1.1); */
+    .container.hero .blur.visible {
         opacity: 1;
     }
 
-    .container .project .project-wrap {
+    .container.hero .project-wrap {
         opacity: 0;
         width: 90%;
         height: 90%;
@@ -54,11 +50,11 @@
         z-index: 1;
     }
 
-    .container .project .project-wrap.visible {
+    .container.hero .project-wrap.visible {
         opacity: 1;
     }   
 
-    .container .project h4{
+    .container.hero .project-wrap h4{
         display: inline-block;
         margin: 0px 7px;
         font-size: 18px;
@@ -66,7 +62,7 @@
         position: relative;
     }
 
-        .container .project h4::after {
+    .container.hero .project-wrap h4::after {
             content: "";
             position: absolute;
             width: 2px;
@@ -76,11 +72,11 @@
             margin: 0 7px;
         }
 
-        .container h4:last-of-type::after {
+        .container.hero h4:last-of-type::after {
             display: none;
         }
 
-    .container .project p {
+    .container.hero .project-wrap p {
         display: inline-block;
         width: 100%;
         font-size: 16px;
@@ -92,7 +88,7 @@
         transform: translate(-50%, -50%);
     }
 
-    .container .project iframe{
+    .container.hero .project-wrap iframe{
         width: 100%;
         position: absolute;
         bottom: 0;

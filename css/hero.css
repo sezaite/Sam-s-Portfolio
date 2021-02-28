@@ -31,26 +31,18 @@
     overflow: hidden;
 }
 
-.container.hero .view > .list {
+.container.hero .view .list {
     display: inline-block;
     width: 100%;
     transition: all 1s;
 }
 
-.container.hero .list > .item {
+.container.hero .list .item {
     width: 100%;
     padding: 0 40px;
     text-align: center;
     float: left;
 }
-
-
-        .container.hero .col-6 .project {
-            margin-left: calc(50% - 170px);
-            margin-bottom: 20px;
-            /* background-image: url(../img/main-img.jpg); */
-            
-        }
 
                     .container.hero .controls .minus {
                         display: inline-block;

@@ -1,6 +1,7 @@
 function renderAlbums(album) {
+    console.log('albumai');
     let HTML = "";
-    HTML += `<div class="project" style ="background-image: url('img/${album.imgLink}');">
+    HTML += `<div class="album-art" style ="background-image: url('img/${album.imgLink}');">
             <div class="blur" style ="background-image: url('img/${album.imgLink}');"></div>
             <div class="project-wrap">
                 ${generateTitles(album.titles)}
