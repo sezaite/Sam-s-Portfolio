@@ -26,6 +26,9 @@ function checkViewport(howManyLeft) {
             return 2;
         }
     } else {
+        button.innerText = "Collapse";
+        button.removeEventListener('click', generateArticleRow)
+        button.addEventListener('click', collapse);
         return howManyLeft;
     }
 }
@@ -44,10 +47,6 @@ function generateArticleRow() {
         for (let i = whereToStart; i < howManyToLoad; i++) {
             HTML += `<div class="article-column col-lg-4 col-3 col-md-6 col-xs-12">${renderArticles(blogData[i])}</div>`;
         }
-    } else {
-        button.innerText = "Collapse";
-        button.removeEventListener('click', workButtonCLick)
-        button.addEventListener('click', collapse);
     }
     list.innerHTML = HTML;
     scroll({
@@ -57,12 +56,15 @@ function generateArticleRow() {
 }
 
 function collapse() {
-    const allRows = document.querySelectorAll('.new');
-    for (let i = 0, len = allRows.length; i < len; i++) {
-        parent.removeChild(allRows[i]);
+    const collapsedBlogs = checkViewport(6);
+    let collapsedHTML = '';
+    for (let i = 0; i < collapsedBlogs; i++) {
+        collapsedHTML += `<div class="article-column col-lg-4 col-3 col-md-6 col-xs-12">${renderArticles(blogData[i])}</div>`;
     }
+    list.innerHTML = collapsedHTML;
+
     button.removeEventListener('click', collapse);
-    button.addEventListener('click', workButtonCLick);
+    button.addEventListener('click', generateArticleRow);
     button.innerText = "Load more";
     button.scrollIntoView({
         behavior: 'smooth',
