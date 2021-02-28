@@ -58,7 +58,7 @@ function generateArticleRow() {
         button.removeEventListener('click', workButtonCLick)
         button.addEventListener('click', collapse);
     }
-
+    list.innerHTML = HTML;
     scroll({
         behavior: 'smooth',
         top: (button.offsetTop + button.clientHeight + 40) - innerHeight,
