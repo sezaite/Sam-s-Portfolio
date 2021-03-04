@@ -17,8 +17,10 @@ if (!list) {
 let loadedElements = null;
 
 function checkViewport(howManyLeft) {
-    if {
-        //parasyti responsive logika
+    if ((innerWidth > 680 && howManyLeft < 4) || (innerWidth > 680 && howManyLeft < 4) || (innerWidth > 1080 && howManyLeft < 5) || (innerWidth > 1300 && howManyLeft < 6)) {
+        return howManyLeft;
+    } else {
+        return howManyToLoad(blogData.length - howManyLeft);
     } else {
         button.innerText = "Collapse";
         button.removeEventListener('click', generateArticleRow)
@@ -37,8 +39,8 @@ function generateArticleRow() {
     if (loadedElements.length < blogData.length) {
         const whereToStart = loadedElements.length;
         const howManyLeft = blogData.length - whereToStart;
-        const howManyToLoad = loadedElements.length + checkViewport(howManyLeft);
-        for (let i = whereToStart; i < howManyToLoad; i++) {
+        const numberOfItems = loadedElements.length + checkViewport(howManyLeft);
+        for (let i = whereToStart; i < numberOfItems; i++) {
             HTML += `<div class="article-column col-lg-4 col-3 col-md-6 col-xs-12">${renderArticles(blogData[i])}</div>`;
         }
     }
@@ -66,5 +68,16 @@ function collapse() {
     });
 }
 
+function howManyToLoad(loadedNumber) {
+    if (innerWidth > 1300) {
+        return (loadedNumber % 4) + 4;
+    } else if (innerWidth > 1080) {
+        return (loadedNumber % 3) + 3;
+    } else if (innerWidth > 680) {
+        return (loadedNumber % 2) + 2;
+    } else {
+        return 2;
+    }
 
-export { generateArticleRow };
+
+    export { generateArticleRow };
