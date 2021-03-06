@@ -14,7 +14,7 @@
                 display: inline-block;
                 width: 100%;
                 font-size: 38px;
-                margin: 150px 0 30px;
+                margin: 280px 0 30px;
             }
 
             .container.hero .col-6 .titles{
@@ -29,6 +29,7 @@
     display: inline-block;
     width: 100%;
     overflow: hidden;
+    margin-top: 150px;
 }
 
 .container.hero .view .list {
@@ -68,6 +69,15 @@
                             opacity: 1;
                         }
 
+@media (max-width: 860px) {
+    .container.hero .project-side .view{
+        display: none;
+    }
+
+    .container.hero .project-side .btn {
+        margin: auto;
+    }
+}
            
 
                 
