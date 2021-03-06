@@ -1,11 +1,12 @@
 function burgerAnimation() {
     const burger = document.querySelector(".burger");
-    const navBlocks = document.querySelectorAll(".nav");
-    const navLinks = document.querySelectorAll(".nav a");
+    const navBlocks = document.querySelectorAll("nav");
+    const navLinks = document.querySelectorAll("nav a");
     console.log(navLinks);
     console.log(navBlocks);
 
     burger.addEventListener("click", () => {
+        console.log('click');
         navBlocks.forEach((block) => {
             block.classList.toggle("nav-active");
 
