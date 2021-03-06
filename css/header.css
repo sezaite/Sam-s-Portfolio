@@ -131,3 +131,9 @@ header nav a:nth-last-child(3) {
 .x .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+
+@media (max-width: 680px){
+    header .logo {
+        display: 14px;
+    }
+}

@@ -21,6 +21,7 @@
                 width: 100%;
                 font-size: 20px;
                 margin: 10px 0; 
+                word-wrap: normal;
             }
 
 /* hero right side */
@@ -77,6 +78,10 @@
     .container.hero .project-side .btn {
         margin: auto;
     }
+}
+
+@media (max-width: 680px){
+
 }
            
 
