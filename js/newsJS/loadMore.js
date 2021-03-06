@@ -18,16 +18,15 @@ let loadedElements = null;
 
 function checkViewport(howManyLeft) {
     if ((innerWidth > 680 && howManyLeft < 4) || (innerWidth > 680 && howManyLeft < 4) || (innerWidth > 1080 && howManyLeft < 5) || (innerWidth > 1300 && howManyLeft < 6)) {
-        return howManyLeft;
-    } else {
-        return howManyToLoad(blogData.length - howManyLeft);
-    } else {
         button.innerText = "Collapse";
         button.removeEventListener('click', generateArticleRow)
         button.addEventListener('click', collapse);
         return howManyLeft;
+    } else {
+        return howManyToLoad(blogData.length - howManyLeft);
     }
 }
+
 function generateArticleRow() {
     loadedElements = list.querySelectorAll('.other-blogs .article');
     if (!loadedElements) {
@@ -52,7 +51,7 @@ function generateArticleRow() {
 }
 
 function collapse() {
-    const collapsedBlogs = checkViewport(6);
+    const collapsedBlogs = howManyToLeave();
     let collapsedHTML = '';
     for (let i = 0; i < collapsedBlogs; i++) {
         collapsedHTML += `<div class="article-column col-lg-4 col-3 col-md-6 col-xs-12">${renderArticles(blogData[i])}</div>`;
@@ -78,6 +77,18 @@ function howManyToLoad(loadedNumber) {
     } else {
         return 2;
     }
+}
 
+function howManyToLeave() {
+    if (innerWidth > 1300) {
+        return 4;
+    } else if (innerWidth > 1080) {
+        return 3;
+    } else if (innerWidth > 680) {
+        return 2;
+    } else {
+        return 1;
+    }
+}
 
-    export { generateArticleRow };
+export { generateArticleRow };
