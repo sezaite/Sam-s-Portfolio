@@ -1,7 +1,7 @@
 function burgerAnimation() {
     const burger = document.querySelector(".burger");
-    const navBlocks = document.querySelectorAll(".menu-wrap");
-    const navLinks = document.querySelectorAll(".menu-wrap a");
+    const navBlocks = document.querySelectorAll(".nav");
+    const navLinks = document.querySelectorAll(".nav a");
     console.log(navLinks);
     console.log(navBlocks);
 

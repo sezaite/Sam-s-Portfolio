@@ -22,6 +22,10 @@
 
 /* custom styling */
 
+.container.header {
+    min-width: 100vh;
+    padding: 8vh;
+}
 
 
 

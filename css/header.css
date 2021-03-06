@@ -1,4 +1,4 @@
-header.container nav {
+header {
     position: fixed;
     top: 0;
     width: 100%;
@@ -10,22 +10,22 @@ header.container nav {
     z-index: 10;
 }
 
-header.container .logo {
+header .logo {
     color: var(--main-text-color);
     font-size: 20px;
 }
 
-header.container .menu-wrap {
+header nav {
     display: flex;
     justify-content: space-around;
     width: 30%;
 }
 
-header.container .menu-wrap {
+header nav {
     width: 20%;
 }
 
-header.container .menu-wrap a {
+header nav a {
     color: var(--main-text-color);
     text-decoration: none;
     margin-right: 50px;
@@ -33,17 +33,17 @@ header.container .menu-wrap a {
     font-size: 16px;
 }
 
-header.container .menu-wrap a:last-of-type{
+header nav a:last-of-type{
     margin-right: 0;
 } 
 
-header.container .menu-wrap a.fa {
+header nav a.fa {
     width: 20px;
     height: 20px;
     font-size: 20px;
 }
 
-header.container .menu-wrap a:nth-last-child(3) {
+header nav a:nth-last-child(3) {
     margin-left: 50px;
 }
 
@@ -60,13 +60,13 @@ header.container .menu-wrap a:nth-last-child(3) {
 }
 
 @media (max-width: 1200px){
-    header.container .menu-wrap a {
+    header nav a {
         margin-right: 30px;
     }
 }
 
 @media (max-width: 1080px) {
-    .menu-wrap {
+    nav {
         width: 60%;
     }
 }
@@ -76,7 +76,7 @@ header.container .menu-wrap a:nth-last-child(3) {
         overflow-x: hidden;
     }
     
-    .menu-wrap {
+    nav {
         position: fixed;
         left: 0px;
         height: 92vh;
@@ -90,11 +90,11 @@ header.container .menu-wrap a:nth-last-child(3) {
         background-color: var(--main-color);
     }
 
-    header.container .menu-wrap a:nth-last-child(3) {
+    header nav a:nth-last-child(3) {
         margin-left: 0;
     }
     
-    .menu-wrap a {
+    nav a {
         opacity: 0;
     }
     
