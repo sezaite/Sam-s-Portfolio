@@ -44,10 +44,8 @@ class SpotifyButtonToggle {
         const playButtons = document.querySelectorAll(".spotify-wrap");
         playButtons.forEach((button) => {
             button.addEventListener("click", function () {
-                const playBtn = document.querySelector('.spotify-wrap .spotify-play');
-                const pauseBtn = document.querySelector('.spotify-wrap .spotify-pause');
-                console.log(pauseBtn);
-                console.log(playBtn);
+                let playBtn = button.querySelector('.spotify-play');
+                let pauseBtn = button.querySelector('.spotify-pause');
                 if (pauseBtn.classList.contains("pressed")) {
                     playBtn.classList.add("pressed");
                     pauseBtn.classList.remove("pressed");

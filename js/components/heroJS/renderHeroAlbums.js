@@ -6,7 +6,7 @@ function renderAlbums(album) {
             <div class="blur" style ="background-image: url('img/${album.imgLink}');"></div>
             <div class="project-wrap">
                 ${generateTitles(album.titles)}
-                <div class='spotify-wrap'><div class='spotify-play'></div><div class='spotify-pause pressed'></div></div>
+                <div class='spotify-wrap'><div class='spotify-play pressed'></div><div class='spotify-pause'></div></div>
                 <p>${album.description}<a href="#">Read more...</a></p>
                 </div>
             </div>`;
