@@ -82,19 +82,25 @@
         font-size: 16px;
         color: var(--secondary-color);
         position: absolute;
-        top: 50%;
+        top: 80%;
         left: 50%;
         padding: 10px;
         transform: translate(-50%, -50%);
     }
 
-    .container.hero .project-wrap iframe{
+    .container.hero .project-wrap p a {
+        display: block; 
+        color: var(--secondary-color); 
+        font-size: 20px; 
+    }
+
+    /* .container.hero .project-wrap iframe{
         width: 100%;
         position: absolute;
         bottom: 0;
         left: 0;  
         padding-top: 6px;          
-    }
+    } */
 
     @media (max-width: 1080px){
         .container.hero .col-6 .album-art{

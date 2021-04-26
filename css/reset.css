@@ -5,6 +5,7 @@ body * {
     vertical-align: top;
     box-sizing: border-box;
     font-family: var(--main-font);
+    background-color: transparent; //for the play button...
 }
 
 

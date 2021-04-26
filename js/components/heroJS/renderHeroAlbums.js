@@ -2,15 +2,18 @@ function renderAlbums(album) {
     console.log('albumai');
     let HTML = "";
     HTML += `<div class="album-art" style ="background-image: url('img/${album.imgLink}');">
+    
             <div class="blur" style ="background-image: url('img/${album.imgLink}');"></div>
             <div class="project-wrap">
                 ${generateTitles(album.titles)}
-                <p>${album.description}</p>
-                <iframe ${album.spotifyLink}></iframe>
+                <div class='spotify-wrap'><div class='spotify-play'></div><div class='spotify-pause pressed'></div></div>
+                <p>${album.description}<a href="#">Read more...</a></p>
                 </div>
             </div>`;
     return HTML;
 }
+
+// <iframe ${album.spotifyLink}></iframe>
 
 function generateTitles(titles) {
     let HTML = "";

@@ -1,0 +1,46 @@
+.spotify-wrap {
+    display: block;
+    margin: 80px auto;
+    width: 84px;
+    height: 84px;
+    border: solid 3px var(--secondary-color);
+    border-radius: 50px;
+    position:relative;
+    transition: all 0.4s ease-out;
+}
+
+.spotify-wrap .spotify-play {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-33.333%, -50%);     
+  width: 40px;
+  height: 40px;
+  border-style: solid;
+  border-width: 20px 0px 20px 40px;
+  border-color: transparent transparent transparent var(--secondary-color);
+  }
+
+  .spotify-wrap .spotify-pause {
+  display: none; /*--------here-------*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-25%, -50%);
+  width: 40px;
+  height: 40px;
+  border-style: solid;
+  border-style: double;
+  border-width: 0px 0px 0px 20px;
+  border-color: var(--secondary-color);
+  }
+
+  .spotify-wrap:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+  .spotify-wrap .spotify-play.pressed, .spotify-wrap .spotify-pause.pressed {
+    display: block;
+  }

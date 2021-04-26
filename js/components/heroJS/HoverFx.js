@@ -7,7 +7,6 @@ class HoverFx {
 
         this.projectsList = null;
         this.init();
-        console.log('hoverinu');
     }
 
     init() {
