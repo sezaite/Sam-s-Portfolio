@@ -9,9 +9,26 @@
 
 .container.about .about-p {
     text-align: start;
+    /* width: 100%; */
 }
 
 .container.about img {
     text-align: start;
     float: left;
+}
+
+/* @media (max-width: 860px) {
+    .container.about .about-p {
+    
+    }
+} */
+
+@media (max-width: 680px){
+    .container.about .about-right{
+        display: none;
+    }
+
+    .container.about img {
+        display: none;
+    }
 }

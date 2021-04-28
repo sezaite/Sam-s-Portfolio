@@ -71,7 +71,7 @@
                         }
 
 @media (max-width: 860px) {
-    .container.hero .project-side .view{
+    .container.hero .project-side {
         display: none;
     }
 

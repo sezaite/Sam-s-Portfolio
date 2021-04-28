@@ -20,6 +20,7 @@
   border-style: solid;
   border-width: 20px 0px 20px 40px;
   border-color: transparent transparent transparent var(--secondary-color);
+  transition: all 0.4s ease-out;
  
   }
 
@@ -35,16 +36,24 @@
   border-style: double;
   border-width: 0px 0px 0px 20px;
   border-color: var(--secondary-color);
+  transition: all 0.4s ease-out;
   
   }
 
   .spotify-wrap .spotify-play.pressed, .spotify-wrap .spotify-pause.pressed {
     display: block;
+    transition: all 0.4s ease-out;
   }
 
   .spotify-wrap:hover {
-    opacity: 0.6;
+    transform: scale(0.95);
     cursor: pointer;
   }
 
+  .spotify-wrap:active {
+    opacity: 0.6;
+  }
+  .spotify-wrap:active * {
+    border-color: transparent transparent transparent var(--btn-secondary-color);
+  }
  

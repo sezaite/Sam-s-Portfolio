@@ -6,14 +6,14 @@ function renderAlbums(album) {
             <div class="blur" style ="background-image: url('img/${album.imgLink}');"></div>
             <div class="project-wrap">
                 ${generateTitles(album.titles)}
-                <div class='spotify-wrap'><div class='spotify-play pressed'></div><div class='spotify-pause'></div></div>
                 <p>${album.description}<a href="#">Read more...</a></p>
+                <iframe ${album.spotifyLink}></iframe>
                 </div>
             </div>`;
     return HTML;
 }
 
-// <iframe ${album.spotifyLink}></iframe>
+// <div class='spotify-wrap'><div class='spotify-play pressed'></div><div class='spotify-pause'></div></div>
 
 function generateTitles(titles) {
     let HTML = "";

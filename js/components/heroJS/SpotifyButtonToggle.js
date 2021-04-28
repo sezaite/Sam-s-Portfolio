@@ -41,11 +41,11 @@ class SpotifyButtonToggle {
     }
 
     buttonClick() {
-        const playButtons = document.querySelectorAll(".spotify-wrap");
-        playButtons.forEach((button) => {
-            button.addEventListener("click", function () {
-                let playBtn = button.querySelector('.spotify-play');
-                let pauseBtn = button.querySelector('.spotify-pause');
+        const songs = document.querySelectorAll(".spotify-wrap");
+        songs.forEach((song) => {
+            song.addEventListener("click", function () {
+                let playBtn = song.querySelector('.spotify-play');
+                let pauseBtn = song.querySelector('.spotify-pause');
                 if (pauseBtn.classList.contains("pressed")) {
                     playBtn.classList.add("pressed");
                     pauseBtn.classList.remove("pressed");
