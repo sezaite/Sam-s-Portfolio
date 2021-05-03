@@ -111,5 +111,10 @@
     }
 
     @media (max-width: 860px) {
-        
+        .container.hero .col-6 .album-art{
+            margin-left: calc(50% - 100px);
+            width: 200px;
+            height: 200px;
+        }
+
     }
