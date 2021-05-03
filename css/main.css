@@ -24,7 +24,7 @@
 /* custom styling */
 
 .container.header {
-    min-width: 100vh;
+    /* min-width: 100vh; */
     padding-top: 8vh;
 }
 
