@@ -1,5 +1,4 @@
 function renderAlbums(album) {
-    console.log('albumai');
     let HTML = "";
     HTML += `<div class="album-art" style ="background-image: url('img/${album.imgLink}');">
     

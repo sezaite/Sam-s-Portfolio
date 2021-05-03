@@ -4,7 +4,7 @@ import { albumData } from './data/albumData.js';
 import { HeroScroll } from './components/heroJS/HeroScrollView.js';
 import { SpotifyButtonToggle } from './components/heroJS/SpotifyButtonToggle.js';
 
-// typeWriter();
+typeWriter();
 
 new HeroScroll({
     selector: '.container.hero .project-side .view',
